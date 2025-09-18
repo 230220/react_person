@@ -8,9 +8,14 @@ export const Person = ({ person }) => {
       return <p className="Person__partner">I am not married</p>;
     }
 
+    // prettier-ignore
+    const partnerLabel = sex === 'm'
+      ? 'wife'
+      : 'husband';
+
     return (
       <p className="Person__partner">
-        {partnerName} is my {sex === 'm' ? 'wife' : 'husband'}
+        {partnerName} is my {partnerLabel}
       </p>
     );
   };
